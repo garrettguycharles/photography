@@ -1,0 +1,46 @@
+.gallery * {
+  transition-duration: var(--transition-duration-fast);
+}
+
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.gallery .active-img {
+  max-height: 75vh;
+  max-width: 90vw;
+  width: unset;
+  height: unset;
+}
+
+.gallery .inactive-img {
+  filter: opacity(0.5) blur(1px);
+}
+
+
+.gallery img {
+  transition: max-height var(--transition-duration-normal) ease, filter var(--transition-duration-fast) ease-in;
+  max-height: 30vh;
+  margin: 0.5rem;
+  object-fit: cover;
+  width: 30vh;
+  height: 30vh;
+  border-radius: var(--border-radius-main);
+}
+
+@media only screen and (max-width: 800px) {
+  .gallery img {
+    max-height: 15vh;
+    width: 15vh;
+    height: 15vh;
+  }
+
+  .gallery .active-img {
+    max-height: 50vh;
+    order: -1;
+  }
+}

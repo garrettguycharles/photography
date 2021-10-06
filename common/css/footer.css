@@ -1,0 +1,49 @@
+.footer {
+
+  display: flex;
+  background-color: var(--color-light-accent-1);
+  align-items: stretch;
+  height: auto;
+  min-height: 200px;
+  border-top: 1px solid var(--color-light-accent-2);
+  margin-top: 1rem;
+
+}
+
+#github-link {
+  font-size: 1.5rem;
+}
+
+#footer-logo {
+
+  max-height: 50px;
+  width: auto;
+
+  margin: 0.5rem;
+
+
+}
+
+#footer-container-first,
+#footer-container-last {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#footer-container-center {
+  flex:3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 801px) {
+
+  #footer-container-center {
+    flex-direction: column;
+  }
+
+}
